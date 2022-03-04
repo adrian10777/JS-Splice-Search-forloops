@@ -54,8 +54,19 @@ function replaceEvens(arr){
 }
 replaceEvens(arr1)
 console.log(arr1); // we can console log here since it is in place after we replaceEvens
-
+//splice is an in place algo
 
 //Expected output
 //Given arr == ["Max","Baseball","Reboot","Goku","Trucks","Rodger"]
 //Output arr == ["even index","Baseball","even index","Goku","even index","Rodger"]
+
+//exercise #2 done with map - out of place algo
+
+let replaced_evens = arr1.map( element => {
+    if(arr1.indexOf(element)%2 === 0) {
+        return 'even index'
+    }
+    return element
+})
+
+console.log(replaced_evens)
